@@ -1,0 +1,14 @@
+runtime: php55
+threadsafe: yes
+service: phpserver
+
+handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+
+- url: .*
+  script: main.php
+
+beta_settings:
+  cloud_sql_instances: "ecgproject-1069:ae86"
